@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vinni.Android", "Vinni\Vinn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vinni.iOS", "Vinni\Vinni.iOS\Vinni.iOS.csproj", "{2E65B618-3647-4E15-950C-D79F8598A1AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vinni", "Vinni\Vinni\Vinni.csproj", "{33A33EF2-0B23-492B-A7C6-E7427EA024F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vinni", "Vinni\Vinni\Vinni.csproj", "{33A33EF2-0B23-492B-A7C6-E7427EA024F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
