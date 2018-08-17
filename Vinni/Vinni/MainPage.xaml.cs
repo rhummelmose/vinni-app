@@ -1,4 +1,4 @@
-﻿using SkiaSharp.Views.Forms;
+﻿//using SkiaSharp.Views.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +15,10 @@ namespace Vinni
             InitializeComponent();
         }
 
-        public void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+        /*public void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             var canvas = args.Info.Size.ToString();
             Console.WriteLine(canvas);
-        }
+        }*/
     }
 }
