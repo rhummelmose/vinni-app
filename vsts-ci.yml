@@ -3,16 +3,15 @@
 name: "Build"
 steps:
 - task: XamariniOS@2
-inputs:
-  solutionFile: 'Vinnie.sln'
-  configuration: 'Release'
-  packageApp: Vinnie.iOS
-  runNugetRestore: true 
-  #clean: false # Optional
-  #buildForSimulator: false # Optional
-  #args: # Optional
-  #workingDirectory: # Optional
-  #mdtoolFile: # Optional
-  #signingIdentity: # Optional
-  #signingProvisioningProfileID: # Optional
-displayName: "Build!"
+  inputs:
+    solutionFile: 'Vinnie.sln'
+    configuration: 'Release'
+    packageApp: Vinnie.iOS
+    runNugetRestore: true 
+    #clean: false # Optional
+    #buildForSimulator: false # Optional
+    #args: # Optional
+    #workingDirectory: # Optional
+    #mdtoolFile: # Optional
+    #signingIdentity: # Optional
+    #signingProvisioningProfileID: # Optional
