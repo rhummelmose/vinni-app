@@ -4,9 +4,9 @@ name: "Build"
 steps:
 - task: XamariniOS@2
   inputs:
-    solutionFile: 'Vinnie.sln'
+    solutionFile: 'Vinni.sln'
     configuration: 'Release'
-    packageApp: Vinnie.iOS
+    packageApp: Vinni.iOS
     runNugetRestore: true 
     #clean: false # Optional
     #buildForSimulator: false # Optional
