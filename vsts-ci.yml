@@ -17,4 +17,7 @@ steps:
     runNugetRestore: true
     signingIdentity: "iPhone Developer: Rasmus Hummelmose (J82239EDNB)"
     signingProvisioningProfileID: "6ff33fe2-aefb-4a9d-99b3-f69b2f3b9c0c"
-- bash: echo "BUILD_ARTIFACTSTAGINGDIRECTORY is $BUILD_ARTIFACTSTAGINGDIRECTORY"; ( set -o posix ; set ) | less
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: "$(Build.SourcesDirectory)/Vinni/Vinni.iOS/bin/iPhone/Debug/Vinni.iOS.ipa" 
+    artifactName: "vinni_ios_ipa"
