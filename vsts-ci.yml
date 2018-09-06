@@ -2,6 +2,28 @@
 
 name: "Build"
 steps:
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: rhummelmose_personal_ios_development_certificate.p12
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: rhummelmose_personal_ios_development_provisioning_profile.mobileprovision
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: $(Agent.TempDirectory)/rhummelmose_personal_ios_development_certificate.p12
+    certPwd: $(secret.certificatePassword)
+    #keychain: 'temp' # Options: default, temp, custom
+    #keychainPassword: # Required when keychain == Custom || Keychain == Default
+    #customKeychainPath: # Required when keychain == Custom
+    #deleteCert: # Optional
+    #deleteCustomKeychain: # Optional
+    #signingIdentity: # Optional
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    #provisioningProfileLocation: 'secureFiles' # Options: secureFiles, sourceRepository
+    provProfileSecureFile: rhummelmose_personal_ios_development_provisioning_profile.mobileprovision
+    #provProfileSourceRepository: # Required when provisioningProfileLocation == SourceRepository
+    #removeProfile: # Optional
 - task: XamariniOS@2
   inputs:
     solutionFile: 'Vinni.sln'
@@ -13,5 +35,5 @@ steps:
     #args: # Optional
     #workingDirectory: # Optional
     #mdtoolFile: # Optional
-    #signingIdentity: # Optional
-    #signingProvisioningProfileID: # Optional
+    signingIdentity: "iPhone Developer: Rasmus Hummelmose (J82239EDNB)"
+    signingProvisioningProfileID: "6ff33fe2-aefb-4a9d-99b3-f69b2f3b9c0c"
