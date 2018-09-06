@@ -4,13 +4,15 @@ name: "Build"
 steps:
 - task: DownloadSecureFile@1
   inputs:
+    name: rhummelmose_personal_ios_development_certificate
     secureFile: rhummelmose_personal_ios_development_certificate.p12
 - task: DownloadSecureFile@1
   inputs:
+    name: rhummelmose_personal_ios_development_provisioning_profile
     secureFile: rhummelmose_personal_ios_development_provisioning_profile.mobileprovision
 - task: InstallAppleCertificate@2
   inputs:
-    certSecureFile: $(Agent.TempDirectory)/rhummelmose_personal_ios_development_certificate.p12
+    certSecureFile: $(rhummelmose_personal_ios_development_certificate.secureFilePath)
     certPwd: $(secret.certificatePassword)
     #keychain: 'temp' # Options: default, temp, custom
     #keychainPassword: # Required when keychain == Custom || Keychain == Default
@@ -21,7 +23,7 @@ steps:
 - task: InstallAppleProvisioningProfile@1
   inputs:
     #provisioningProfileLocation: 'secureFiles' # Options: secureFiles, sourceRepository
-    provProfileSecureFile: rhummelmose_personal_ios_development_provisioning_profile.mobileprovision
+    provProfileSecureFile: rhummelmose_personal_ios_development_provisioning_profile.secureFilePath
     #provProfileSourceRepository: # Required when provisioningProfileLocation == SourceRepository
     #removeProfile: # Optional
 - task: XamariniOS@2
