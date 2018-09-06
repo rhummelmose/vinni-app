@@ -17,3 +17,5 @@ steps:
     runNugetRestore: true
     signingIdentity: "iPhone Developer: Rasmus Hummelmose (J82239EDNB)"
     signingProvisioningProfileID: "6ff33fe2-aefb-4a9d-99b3-f69b2f3b9c0c"
+- bash: ${Build.ArtifactStagingDirectory}
+    
