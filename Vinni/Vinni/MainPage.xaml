@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Vinni"
              x:Class="Vinni.MainPage">
 
+    <!-- -->
     <!--<skia:SKCanvasView x:Name="canvasView"
                        PaintSurface="OnCanvasViewPaintSurface" />-->
 
