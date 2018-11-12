@@ -22,6 +22,7 @@ namespace Vinni.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            // Hi there!
             global::Xamarin.Forms.Forms.Init();
       LoadApplication(new App());
 
